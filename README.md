@@ -8,7 +8,7 @@ If you like or use some of the code in my repository, please do me the honor of 
 
 I blog passionately at:
 
-[![MSEndpointMgr Blog](https://msendpointmgr.com/wp-content/uploads/2020/04/MSEndpoingMgrLogo.png)](https://www.msendpointmgr.com)
+[![MSEndpointMgr Blog](https://msendpointmgr.com/wp-content/uploads/2021/01/msendpointmgr_shield.png)](https://www.msendpointmgr.com)
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 

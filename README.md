@@ -1,10 +1,14 @@
 ### Hi there awesome person! 👋
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=Mardahl)
+Welcome to MySpace! Err.. GitHub!
+
+If you like or use some of the code in my repository, please do me the honor of following me here and on Twitter, those stats help me determine how much more work I should put into my contributions 😄
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)
+
 
 
 

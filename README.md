@@ -1,7 +1,5 @@
 ### Hi there awesome person! 👋
 
-My name is Michael Mardahl and I have been around here for {{ ACCOUNT_AGE }} years!
-
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)

@@ -1,6 +1,10 @@
 ### Hi there awesome person! 👋
 
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl/github-readme-stats)
+
 [![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)
+
+
 
 <!--
 **mardahl/Mardahl** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

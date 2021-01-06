@@ -1,6 +1,6 @@
 ### Hi there awesome person! 👋
 
-Welcome to MySpace! Err.. GitHub!
+Welcome to MySpace! Err... GitHub!
 
 If you like or use some of the code in my repository, please do me the honor of following me here and on Twitter, those stats help me determine how much more work I should put into my contributions 😄
 

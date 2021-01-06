@@ -1,5 +1,7 @@
 ### Hi there awesome person! 👋
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id)
+
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)

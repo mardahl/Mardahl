@@ -6,6 +6,8 @@ If you like or use some of the code in my repository, please do me the honor of 
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)
 
+![MSEndpointMgr Blog](https://img.shields.io/twitter/url?color=red&label=MSENDPOINTMGR&logo=microsoft&style=for-the-badge&url=https%3A%2F%2Fwww.msendpointmgr.com)
+
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 
 

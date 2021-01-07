@@ -2,6 +2,8 @@
 
 Welcome to MySpace! Err... GitHub!
 
+<a href="http://example.com/" target="_blank">Hello, world!</a>
+
 If you *like* or use some of the code in my repository, please do me the honor of following me here and on Twitter.
 Those stats help me determine how much more work I should put into my contributions 😄
 

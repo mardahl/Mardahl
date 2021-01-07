@@ -15,7 +15,7 @@ Those stats help me determine how much more work I should put into my contributi
 
 [![MVP Profile Michael Mardahl](https://msendpointmgr.com/wp-content/uploads/2021/01/mvp-banner-216px.png)](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl)
 
-- 🔭 I also try to be active here on GitHub! 😄
+- 🔭 I also try to be active here on GitHub! 😄 [I got some Gists for you as well!](https://gist.github.com/mardahl)
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
 

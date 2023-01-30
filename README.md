@@ -11,7 +11,7 @@ Those stats help me determine how much more work I should put into my contributi
 
 [![MSEndpointMgr Blog](https://msendpointmgr.com/wp-content/uploads/2021/01/msendpointmgr_shield.png)](https://www.msendpointmgr.com)
 
-- 🌱 And I am a **Microsoft MVP** in the Enterprise Mobility category.
+- 🌱 And I am a **Microsoft MVP** in the Enterprise Mobility category AND the Security category.
 
 [![MVP Profile Michael Mardahl](https://msendpointmgr.com/wp-content/uploads/2021/01/mvp-banner-216px.png)](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl)
 

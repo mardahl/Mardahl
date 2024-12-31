@@ -2,7 +2,7 @@
 
 Welcome to MySpace! Err... GitHub!
 
-If you *like* or use some of the code in my repository, please do me the honor of following me here and on Twitter.
+If you *like* or use some of the code in my repository, please do me the honor of following me here and on x.
 Those stats help me determine how much more work I should put into my contributions 😄
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)

@@ -10,7 +10,7 @@ I publish tools, notes, scripts, and field-tested ideas for people keeping moder
 
 ## Signal Sources
 
-[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Follow%20the%20signal-00f5ff?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=michael-mardahl)
+[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Connect%20on%20LinkedIn-0A192F?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=michael-mardahl)
 
 | Channel | Link |
 | --- | --- |

@@ -1,20 +1,25 @@
-### Hi there awesome person! 👋
+<p align="center">
+  <img src="assets/cyberpunk-header.svg" alt="Michael Mardahl cyberpunk profile banner" width="100%" />
+</p>
 
-Welcome to MySpace! Err... GitHub!
+## Transmission
 
-If you *like* or use some of the code in my repository, please do me the honor of following me here and on x.
-Those stats help me determine how much more work I should put into my contributions 😄
+Welcome to the grid. I am Michael Mardahl, a Microsoft MVP in Security, endpoint management nerd, automation builder, and community contributor.
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=blue&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?screen_name=michael_mardahl)
+I publish tools, notes, scripts, and field-tested ideas for people keeping modern Microsoft environments secure, manageable, and slightly less haunted.
 
-- 💬 I **Blog** passionately at:
+## Signal Sources
 
-[![MSEndpointMgr Blog](https://msendpointmgr.com/wp-content/uploads/2021/01/msendpointmgr_shield.png)](https://www.msendpointmgr.com)
+[![X Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=00f5ff&label=Follow%20the%20signal&logo=x&style=for-the-badge)](https://x.com/michael_mardahl)
 
-- 🌱 And I am a **Microsoft MVP** in the Security category.
+| Channel | Link |
+| --- | --- |
+| Field notes and research | [MSEndpointMgr Blog](https://www.msendpointmgr.com) |
+| Microsoft MVP profile | [Security MVP: Michael Mardahl](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl) |
+| Useful fragments | [Gists from the grid](https://gist.github.com/mardahl) |
 
-[![MVP Profile Michael Mardahl](https://msendpointmgr.com/wp-content/uploads/2021/01/mvp-banner-216px.png)](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl)
+## System Telemetry
 
-- 🔭 I also try to be active here on GitHub! 😄 [I got some Gists for you as well!](https://gist.github.com/mardahl)
-
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=mardahl)](https://github.com/mardahl)
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mardahl&theme=radical" alt="Michael Mardahl GitHub profile telemetry" />
+</p>

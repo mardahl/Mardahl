@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 1200 420">
+  <title id="title">Michael Mardahl cyberpunk profile header</title>
+  <desc id="desc">Animated synthwave hero banner with neon grid, glowing portal, scanline, twinkling stars, and text for Michael Mardahl.</desc>
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#37125f"/>
+      <stop offset="45%" stop-color="#120827"/>
+      <stop offset="100%" stop-color="#02030b"/>
+    </radialGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff2a8"/>
+      <stop offset="28%" stop-color="#ff39cf"/>
+      <stop offset="62%" stop-color="#7b2cff" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#00f5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.95"/>
+      <stop offset="72%" stop-color="#ff2bd6" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#ff2bd6" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-25%" y="-80%" width="150%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#00f5ff" flood-opacity="0.9"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#ff2bd6" flood-opacity="0.75"/>
+    </filter>
+    <pattern id="scanPattern" width="1200" height="8" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="2" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+    <style>
+      .grid-lines { animation: gridPulse 3.6s ease-in-out infinite; }
+      .portal { animation: portalPulse 4.8s ease-in-out infinite; transform-origin: 600px 212px; }
+      .scanline { animation: scanMove 5.5s linear infinite; }
+      .star-a { animation: twinkle 2.1s ease-in-out infinite; }
+      .star-b { animation: twinkle 2.9s ease-in-out infinite .5s; }
+      .star-c { animation: twinkle 3.4s ease-in-out infinite 1s; }
+      .headline { animation: neonText 2.7s ease-in-out infinite; }
+      @keyframes gridPulse {
+        0%, 100% { opacity: .58; filter: drop-shadow(0 0 2px #00f5ff); }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px #ff2bd6); }
+      }
+      @keyframes portalPulse {
+        0%, 100% { opacity: .78; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.045); }
+      }
+      @keyframes scanMove {
+        from { transform: translateY(-420px); }
+        to { transform: translateY(420px); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: .25; transform: scale(.75); }
+        45% { opacity: 1; transform: scale(1.35); }
+      }
+      @keyframes neonText {
+        0%, 100% { opacity: .96; filter: drop-shadow(0 0 4px #00f5ff) drop-shadow(0 0 12px #ff2bd6); }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px #00f5ff) drop-shadow(0 0 22px #ff2bd6); }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bgGlow)"/>
+  <rect width="1200" height="420" fill="#02030b" opacity="0.28"/>
+
+  <g filter="url(#softGlow)">
+    <circle class="portal" cx="600" cy="208" r="122" fill="url(#portalGlow)"/>
+    <circle class="portal" cx="600" cy="208" r="90" fill="none" stroke="#ff2bd6" stroke-width="4" opacity="0.7"/>
+    <circle class="portal" cx="600" cy="208" r="116" fill="none" stroke="#00f5ff" stroke-width="2" opacity="0.55"/>
+  </g>
+
+  <rect x="0" y="218" width="1200" height="202" fill="#050615" opacity="0.68"/>
+  <line x1="0" y1="218" x2="1200" y2="218" stroke="#00f5ff" stroke-width="2.5" opacity="0.9" filter="url(#softGlow)"/>
+
+  <g class="star-a" fill="#e8fdff">
+    <circle cx="106" cy="66" r="1.8"/>
+    <circle cx="980" cy="78" r="1.6"/>
+    <circle cx="1028" cy="164" r="1.3"/>
+  </g>
+  <g class="star-b" fill="#ffb8f4">
+    <circle cx="232" cy="122" r="1.5"/>
+    <circle cx="850" cy="38" r="1.9"/>
+    <circle cx="1110" cy="116" r="1.4"/>
+  </g>
+  <g class="star-c" fill="#8df9ff">
+    <circle cx="378" cy="48" r="1.7"/>
+    <circle cx="720" cy="96" r="1.5"/>
+    <circle cx="75" cy="174" r="1.2"/>
+  </g>
+
+  <g class="grid-lines" stroke-linecap="round">
+    <path d="M0 420 L516 218 M120 420 L540 218 M250 420 L566 218 M380 420 L590 218 M820 420 L610 218 M950 420 L634 218 M1080 420 L660 218 M1200 420 L684 218" stroke="url(#gridFade)" stroke-width="1.8" fill="none"/>
+    <path d="M0 390 H1200 M0 362 H1200 M0 334 H1200 M0 306 H1200 M0 280 H1200 M0 256 H1200 M0 236 H1200" stroke="#ff2bd6" stroke-width="1.2" opacity="0.72" fill="none"/>
+    <path d="M0 408 H1200 M0 376 H1200 M0 348 H1200 M0 320 H1200 M0 292 H1200 M0 268 H1200 M0 246 H1200" stroke="#00f5ff" stroke-width="0.85" opacity="0.45" fill="none"/>
+  </g>
+
+  <g opacity="0.18">
+    <path d="M0 220 C180 196 295 236 466 214 C592 198 674 232 800 214 C970 190 1068 226 1200 206 L1200 252 L0 252 Z" fill="#00f5ff"/>
+    <path d="M0 230 C205 212 324 246 492 224 C640 205 716 246 880 222 C1006 204 1108 234 1200 220" fill="none" stroke="#ff2bd6" stroke-width="3"/>
+  </g>
+
+  <g text-anchor="middle" font-family="Orbitron, Rajdhani, 'Segoe UI', Arial, sans-serif" letter-spacing="6">
+    <text class="headline" x="600" y="132" fill="#f6fbff" font-size="58" font-weight="800" filter="url(#textGlow)">MICHAEL MARDAHL</text>
+    <text x="600" y="176" fill="#00f5ff" font-size="23" font-weight="700" filter="url(#textGlow)">SECURITY SYSTEMS ONLINE</text>
+    <text x="600" y="356" fill="#ffb8f4" font-size="18" font-weight="700" letter-spacing="3" filter="url(#textGlow)">MICROSOFT MVP  //  ENDPOINT SECURITY  //  AUTOMATION  //  COMMUNITY TOOLS</text>
+  </g>
+
+  <rect width="1200" height="420" fill="url(#scanPattern)" opacity="0.5"/>
+  <rect class="scanline" x="0" y="0" width="1200" height="80" fill="url(#scanPattern)" opacity="0.55"/>
+  <rect width="1200" height="420" fill="none" stroke="#00f5ff" stroke-width="2" opacity="0.55"/>
+</svg>

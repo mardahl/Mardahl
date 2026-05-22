@@ -14,6 +14,7 @@ I publish tools, notes, scripts, and field-tested ideas for people keeping moder
 
 | Channel | Link |
 | --- | --- |
+| Consulting | [Available for hire via Inciro](https://inciro.com) |
 | Personal blog | [iphase.dk](https://iphase.dk) |
 | Team field notes | [MSEndpointMgr Blog](https://www.msendpointmgr.com) |
 | Microsoft MVP profile | [Security MVP: Michael Mardahl](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl) |

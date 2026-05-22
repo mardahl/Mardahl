@@ -10,11 +10,12 @@ I publish tools, notes, scripts, and field-tested ideas for people keeping moder
 
 ## Signal Sources
 
-[![X Follow](https://img.shields.io/twitter/follow/michael_mardahl?color=00f5ff&label=Follow%20the%20signal&logo=x&style=for-the-badge)](https://x.com/michael_mardahl)
+[![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Follow%20the%20signal-00f5ff?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=michael-mardahl)
 
 | Channel | Link |
 | --- | --- |
-| Field notes and research | [MSEndpointMgr Blog](https://www.msendpointmgr.com) |
+| Personal blog | [iphase.dk](https://iphase.dk) |
+| Team field notes | [MSEndpointMgr Blog](https://www.msendpointmgr.com) |
 | Microsoft MVP profile | [Security MVP: Michael Mardahl](https://mvp.microsoft.com/en-us/PublicProfile/5004117?fullName=Michael%20Mardahl) |
 | Useful fragments | [Gists from the grid](https://gist.github.com/mardahl) |
 

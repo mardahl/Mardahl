@@ -12,8 +12,6 @@ I publish tools, notes, scripts, and field-tested ideas for people keeping moder
 
 [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Connect%20on%20LinkedIn-0A192F?logo=linkedin&logoColor=white&style=for-the-badge)](https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=michael-mardahl)
 
-[![Copilot AI credits](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/mardahl/2552bfe892a420d8fc4b04f280d8f556/raw/copilot-badge.json)](https://gist.github.com/mardahl/2552bfe892a420d8fc4b04f280d8f556)
-
 Daily tally of my Copilot AI credits, straight from the org billing API.
 
 | Channel | Link |

@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 6 * * *' # daily 06:00 UTC
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: 'Fetch all 24 months of history (one-time seeding)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -23,4 +28,5 @@ jobs:
           GH_ORG: ${{ vars.GH_ORG }}
           GH_LOGIN: ${{ vars.GH_LOGIN }}
           GIST_ID: ${{ vars.GIST_ID }}
+          BACKFILL: ${{ inputs.backfill == true && '1' || '0' }}
         run: node scripts/copilot-badge.mjs

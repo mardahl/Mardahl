@@ -16,14 +16,25 @@ const headers = (token) => ({
 });
 
 const now = new Date();
-const monthsToQuery = [
-  { year: now.getUTCFullYear(), month: now.getUTCMonth() + 1 },
-  // previous month, wrapping year boundary
-  (() => {
-    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1));
-    return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1 };
-  })(),
-];
+
+// Daily runs refresh the current + previous month (previous catches late-posting
+// line items). Pass BACKFILL=1 (workflow_dispatch input) to also fetch every
+// month for the past 24 months - one-time seeding, the API's retention limit.
+// Historic months are recomputed from the API when inside the window; older
+// months stay frozen in state once they fall outside it.
+const backfill = process.env.BACKFILL === '1';
+const monthsToQuery = [];
+const pushMonth = (year, month /* 1-based */) => monthsToQuery.push({ year, month });
+pushMonth(now.getUTCFullYear(), now.getUTCMonth() + 1);
+const prev = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - 1, 1));
+pushMonth(prev.getUTCFullYear(), prev.getUTCMonth() + 1);
+if (backfill) {
+  for (let i = 2; i < 24; i++) {
+    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1));
+    pushMonth(d.getUTCFullYear(), d.getUTCMonth() + 1);
+  }
+}
+console.log(`Querying ${monthsToQuery.length} month(s)${backfill ? ' (backfill mode)' : ''}.`);
 
 // 1. Read existing gist state
 const gistRes = await fetch(`${API}/gists/${GIST_ID}`, { headers: headers(GIST_PAT) });

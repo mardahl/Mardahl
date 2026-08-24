@@ -51,7 +51,7 @@ if (stateFile && !stateFile.truncated) {
 
 // 2. Query billing API for current + previous month (API is per-month source of truth)
 for (const { year, month } of monthsToQuery) {
-  const url = `${API}/organizations/${GH_ORG}/settings/billing/ai_credit/usage?year=${year}&month=${month}&user=${GH_LOGIN}`;
+  const url = `${API}/organizations/${GH_ORG}/settings/billing/ai_credit/usage?year=${year}&month=${month}`;
   const res = await fetch(url, { headers: headers(BILLING_PAT) });
   if (!res.ok) {
     if (res.status === 401 || res.status === 403) {

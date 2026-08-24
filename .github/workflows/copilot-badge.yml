@@ -1,0 +1,26 @@
+name: Copilot Spend Badge
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # daily 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Update Copilot badge gist
+        env:
+          BILLING_PAT: ${{ secrets.BILLING_PAT }}
+          GIST_PAT: ${{ secrets.GIST_PAT }}
+          GH_ORG: ${{ vars.GH_ORG }}
+          GH_LOGIN: ${{ vars.GH_LOGIN }}
+          GIST_ID: ${{ vars.GIST_ID }}
+        run: node scripts/copilot-badge.mjs

@@ -3,6 +3,8 @@
 // for GH_LOGIN, sourced from the org-level AI credit usage endpoint.
 // No dependencies beyond Node 22's built-in fetch.
 
+import { writeFileSync } from 'node:fs';
+
 const { BILLING_PAT, GIST_PAT, GH_ORG, GH_LOGIN, GIST_ID } = process.env;
 for (const [k, v] of Object.entries({ BILLING_PAT, GIST_PAT, GH_ORG, GH_LOGIN, GIST_ID })) {
   if (!v) { console.error(`Missing env var ${k}`); process.exit(1); }
@@ -87,7 +89,56 @@ const badge = {
 const badgeStr = JSON.stringify(badge, null, 2) + '\n';
 const stateStr = JSON.stringify(state, null, 2) + '\n';
 
-// 4. Idempotent write: skip PATCH if badge unchanged
+// 3b. Build radical-styled SVG card with monthly sparkline. Written to
+// assets/copilot-card.svg by the workflow and committed back to the repo -
+// Gist raw URLs serve text/plain with nosniff, so SVG can't be hotlinked
+// from there. Repo hotlink via raw.githubusercontent.com works.
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const sortedMonths = Object.entries(state.months).sort(([a], [b]) => a.localeCompare(b));
+const firstNonZeroIdx = sortedMonths.findIndex(([, v]) => v > 0);
+const series = (firstNonZeroIdx === -1 ? [] : sortedMonths.slice(firstNonZeroIdx))
+  .map(([k, usd]) => ({ key: k, credits: Math.round(usd * 100) }));
+const sinceLabel = series.length
+  ? new Date(series[0].key + '-01T00:00:00Z').toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' })
+  : '';
+
+const CARD_W = 480, CARD_H = 200;
+const SPARK_X = 30, SPARK_Y = 130, SPARK_W = CARD_W - 60, SPARK_H = 50;
+const maxCredits = Math.max(...series.map((s) => s.credits), 1);
+const gap = 3;
+const barW = series.length ? (SPARK_W - gap * (series.length - 1)) / series.length : 0;
+const bars = series.map((s, i) => {
+  const h = Math.max(2, (s.credits / maxCredits) * SPARK_H);
+  const x = SPARK_X + i * (barW + gap);
+  const y = SPARK_Y + (SPARK_H - h);
+  const isLatest = i === series.length - 1;
+  return `<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${barW.toFixed(2)}" height="${h.toFixed(2)}" rx="2" fill="${isLatest ? '#fe428e' : '#f8d847'}" opacity="${isLatest ? '1' : '0.65'}"/>`;
+}).join('\n    ');
+
+const card = `<svg xmlns="http://www.w3.org/2000/svg" width="${CARD_W}" height="${CARD_H}" viewBox="0 0 ${CARD_W} ${CARD_H}" role="img" aria-label="${esc(badge.message)} GitHub Copilot AI credits consumed${sinceLabel ? ` since ${esc(sinceLabel)}` : ''}">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141321"/>
+      <stop offset="100%" stop-color="#1d1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="${CARD_W}" height="${CARD_H}" rx="8" fill="url(#bg)" stroke="#fe428e" stroke-opacity="0.4"/>
+  <text x="30" y="42" fill="#a9fef7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="1">COPILOT AI CREDITS</text>
+  <text x="30" y="90" fill="#fe428e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="42" font-weight="700">${esc(badge.message)}</text>
+  ${sinceLabel ? `<text x="30" y="112" fill="#a9fef7" opacity="0.6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">consumed since ${esc(sinceLabel)}</text>` : ''}
+  ${series.length > 0 ? `<g>
+    ${bars}
+    <text x="${SPARK_X}" y="${SPARK_Y + SPARK_H + 13}" fill="#a9fef7" opacity="0.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9">${esc(series[0].key)}</text>
+    <text x="${SPARK_X + SPARK_W}" y="${SPARK_Y + SPARK_H + 13}" text-anchor="end" fill="#a9fef7" opacity="0.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9">${esc(series[series.length - 1].key)}</text>
+  </g>` : ''}
+</svg>
+`;
+const cardStr = card;
+
+// Write the SVG card to disk; the workflow commits it back to the repo.
+writeFileSync('assets/copilot-card.svg', cardStr);
+
+// 4. Idempotent write: skip PATCH if badge JSON unchanged
 const existingBadge = gist.files['copilot-badge.json'];
 if (existingBadge && existingBadge.content === badgeStr) {
   console.log('Badge unchanged; skipping Gist PATCH.');

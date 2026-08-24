@@ -11,7 +11,7 @@ on:
         default: false
 
 permissions:
-  contents: read
+  contents: write # needed to commit assets/copilot-card.svg back to the repo
 
 jobs:
   update:
@@ -30,3 +30,14 @@ jobs:
           GIST_ID: ${{ vars.GIST_ID }}
           BACKFILL: ${{ inputs.backfill == true && '1' || '0' }}
         run: node scripts/copilot-badge.mjs
+      - name: Commit updated SVG card
+        run: |
+          if git diff --quiet assets/copilot-card.svg 2>/dev/null; then
+            echo "Card unchanged."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/copilot-card.svg
+          git commit -m "Update Copilot AI credits card [skip ci]"
+          git push

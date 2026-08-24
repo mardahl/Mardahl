@@ -29,3 +29,7 @@ Daily tally of my Copilot AI credits, straight from the org billing API.
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=mardahl&theme=radical" alt="Michael Mardahl GitHub profile telemetry" />
 </p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mardahl/mardahl/main/assets/copilot-card.svg" alt="Michael Mardahl Copilot AI credits consumed" width="480" />
+</p>
